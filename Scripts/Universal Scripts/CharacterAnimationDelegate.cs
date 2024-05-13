@@ -6,6 +6,31 @@ public class CharacterAnimationDelegate : MonoBehaviour
 {
     public GameObject left_Arm_Attack_Point, right_Arm_Attack_Point, left_Leg_Attack_Point, right_Leg_Attack_Point;
 
+    public float stand_Up_Timer = 2f;
+
+    private CharacterAnimation animationScript;
+
+    private AudioSource AudioSource;
+
+    [SerializeField]
+    private AudioClip whoosh_Sound, fall_Sound, ground_Hit_Sound, dead_Sound;
+
+    private EnemyMovement enemy_Movement;
+
+    private ShakeCamera shakeCamera;
+
+    void Awake(){
+        animationScript = GetComponent<CharacterAnimation>();
+
+        AudioSource = GetComponent<AudioSource>();
+
+        if(gameObject.CompareTag(Tags.Enemy_TAG)){
+            enemy_Movement = GetComponentInParent<EnemyMovement>();
+        }
+        shakeCamera = GameObject.FindWithTag(Tags.MAIN_CAMERA_TAG).GetComponent<ShakeCamera>();
+
+    }
+
     void Left_Arm_Attack_On() {
         left_Arm_Attack_Point.SetActive(true);
     }
@@ -46,6 +71,76 @@ public class CharacterAnimationDelegate : MonoBehaviour
             right_Leg_Attack_Point.SetActive(false);
         }
     }
+void TagLeft_Arm(){
+    left_Arm_Attack_Point.tag = Tags.LEFT_ARM_TAG;
+}
+
+void UnTagLeft_Arm(){
+    left_Arm_Attack_Point.tag = Tags.UNTAGGED_TAG;
+}
+
+void TagLeft_Leg(){
+    left_Leg_Attack_Point.tag = Tags.LEFT_LEG_TAG;
+}
+
+void UnTagLeft_Leg(){
+    left_Leg_Attack_Point.tag = Tags.UNTAGGED_TAG;
+}
+
+void Enemy_StandUp(){
+StartCoroutine(StandUpAfterTime());
+}
+
+IEnumerator StandUpAfterTime(){
+    yield return new WaitForSeconds(stand_Up_Timer);
+    animationScript.StandUp;
+}
+
+public void Attack_FX_Sound(){
+    AudioSource.volume = 0.2f;
+    AudioSource.clip = whoosh_Sound;
+    AudioSource.Play();
+}
+
+void CharacterDiedSound(){
+     AudioSource.volume = 1f;
+    AudioSource.clip = dead_Sound;
+    AudioSource.Play();
+}
+
+void Enemy_KnockedDown(){
+    AudioSource.clip = fall_Sound;
+    AudioSource.Play ();
+}
+
+void Enemy_HitGround(){
+    AudioSource.clip = ground_Hit_Sound;
+    AudioSource.Play ();
+}
+
+void DisableMovement(){
+    enemy_Movement.enabled = false;
+
+    transform.parent.gameObject.layer = 0;
+}
+void EnableMovement(){
+    enemy_Movement.enabled = true;
+
+     transform.parent.gameObject.layer = 10;
+}
+
+void ShakeCameraOnFall(){
+    shakeCamera.ShouldShake = true;
+}
+
+void CharacterDied(){
+    Invoke("DeactivateGameObject", 2f); 
+}
+
+void DeactivateGameObject(){
+    EnemyManager.instance.SpawnEnemy();
+    gameObject.SetActive(false);
+}
 
 
 }
