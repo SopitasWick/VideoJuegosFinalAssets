@@ -12,11 +12,14 @@ private AudioSource audioSource;
 [SerializeField]
 private AudioClip whoosh_Sound,fall_Sound, ground_Hit_Sound,dead_Sound;
 private EnemyMovement enemy_Movement;
+private ShakeCamera shakeCamera;
 void Awake(){
     animationScript = GetComponent<CharacterAnimation>();
     audioSource=GetComponent<AudioSource>();
     if(gameObject.CompareTag(Tags.ENEMY_TAG)){
         enemy_Movement = GetComponentInParent<EnemyMovement>();
+
+shakeCamera =GameObject.FindWithTag(Tags.MAIN_CAMERA_TAG).GetComponent<ShakeCamera>();
 
     }
 }
@@ -101,5 +104,23 @@ void Enemy_KnockedDown(){
 void Enemy_HitGround(){
     audioSource.clip=ground_Hit_Sound;
     audioSource.Play();
+}
+void DisableMovement(){
+    enemy_Movement.enabled=false;
+transform.parent.gameObject.layer=0;
+}
+void EnableMovement(){
+        enemy_Movement.enabled=true;
+transform.parent.gameObject.layer=3;
+}
+void shakeCameraOnFall(){
+    shakeCamera.ShouldShake=true;
+}
+void CharacterDied(){
+Invoke("DeactivateGameObject",2f);
+}
+void DeactivateGameObject(){
+    EnemyManager2.instance.SpawnEnemy();
+gameObject.SetActive(false);
 }
 }

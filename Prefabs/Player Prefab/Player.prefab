@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9106830902046821125}
   - component: {fileID: 7812425244577124540}
   - component: {fileID: 8443578496456106663}
+  - component: {fileID: 2076903993710864659}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -128,6 +129,18 @@ MonoBehaviour:
   health: 100
   KnockDown: 1
   is_Player: 1
+--- !u!114 &2076903993710864659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213274635069906932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ffb2b5ea72e0547aae7fd61614e5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2365097650469029990
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +189,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   radius: 1
-  damage: 2
+  damage: 20
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -226,9 +239,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   radius: 1
-  damage: 2
+  damage: 20
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -280,7 +293,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   radius: 1
-  damage: 2
+  damage: 20
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -332,7 +345,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   radius: 1
-  damage: 2
+  damage: 20
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -485,6 +498,10 @@ MonoBehaviour:
   left_Leg_Attack_Point: {fileID: 2544087954853576572}
   right_Leg_Attack_Point: {fileID: 6312554141248486596}
   stand_Up_Timer: 2
+  whoosh_Sound: {fileID: 0}
+  fall_Sound: {fileID: 0}
+  ground_Hit_Sound: {fileID: 0}
+  dead_Sound: {fileID: 0}
 --- !u!114 &4112554976635841756
 MonoBehaviour:
   m_ObjectHideFlags: 0

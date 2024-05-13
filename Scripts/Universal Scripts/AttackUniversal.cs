@@ -44,6 +44,9 @@ public class AttackUniversal : MonoBehaviour
 
                 }
 
+            }//is player
+            if(is_Enemy) {
+                Hit[0].GetComponent<HelathScript>().ApplyDamage(damage,false);
             }
 
             gameObject.SetActive(false);
