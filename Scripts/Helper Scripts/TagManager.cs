@@ -35,7 +35,7 @@ public const string GROUND_TAG="Ground";
 public const string PLAYER_TAG = "Player";
 public const string ENEMY_TAG = "Enemy";
 
-public const string LEFT_ARN_TAG ="LeftArm";
+public const string LEFT_ARM_TAG ="LeftArm";
 public const string LEFT_LEG_TAG = "LeftLeg";
 public const string UNTAGGED_TAG = "Untagged";
 public const string MAIN_CAMERA_TAG = "MainCamera";

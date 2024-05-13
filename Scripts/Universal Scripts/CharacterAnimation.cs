@@ -59,4 +59,7 @@ public class CharacterAnimation : MonoBehaviour
     public void Death() {
         anim.SetTrigger(AnimationTags.DEATH_TRIGGER);
     }
+       public void StandUp() {
+        anim.Play(AnimationTags.STAND_UP_TRIGGER);
+    }
 }

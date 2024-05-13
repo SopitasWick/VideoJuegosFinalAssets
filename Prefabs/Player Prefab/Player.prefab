@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6821976511824484172}
   - component: {fileID: 9106830902046821125}
   - component: {fileID: 7812425244577124540}
-  m_Layer: 0
+  - component: {fileID: 8443578496456106663}
+  m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +113,229 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfbfd78e33ef4d4e806ab72a143361a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8443578496456106663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213274635069906932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a439e1209d6f91b4d9e67e6bb192d802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  KnockDown: 1
+  is_Player: 1
+--- !u!1 &2365097650469029990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2925780649857496026}
+  - component: {fileID: 5877092506471288912}
+  m_Layer: 0
+  m_Name: Right Hand attack Point
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2925780649857496026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365097650469029990}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8856842144913591293}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5877092506471288912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365097650469029990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71845b762a897b349ae2f1a8c950480e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  radius: 1
+  damage: 2
+  is_Player: 1
+  is_Enemy: 0
+  hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+--- !u!1 &2544087954853576572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4963657525187436274}
+  - component: {fileID: 2825868934934054166}
+  m_Layer: 0
+  m_Name: Left Leg Attack Point
+  m_TagString: Untagged
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4963657525187436274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2544087954853576572}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8856842144913591183}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2825868934934054166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2544087954853576572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71845b762a897b349ae2f1a8c950480e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  radius: 1
+  damage: 2
+  is_Player: 1
+  is_Enemy: 0
+  hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+--- !u!1 &6312554141248486596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6134831634445702553}
+  - component: {fileID: 2701021808203780657}
+  m_Layer: 0
+  m_Name: Right Leg Attack Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6134831634445702553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6312554141248486596}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8856842144913591233}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2701021808203780657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6312554141248486596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71845b762a897b349ae2f1a8c950480e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  radius: 1
+  damage: 2
+  is_Player: 1
+  is_Enemy: 0
+  hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+--- !u!1 &8042073519852332278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 790008167547856651}
+  - component: {fileID: 1301300489781664581}
+  m_Layer: 0
+  m_Name: Left Hand Attack Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &790008167547856651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8042073519852332278}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8856842144913591179}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1301300489781664581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8042073519852332278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71845b762a897b349ae2f1a8c950480e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  radius: 1
+  damage: 2
+  is_Player: 1
+  is_Enemy: 0
+  hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
 --- !u!1001 &8856842144913985825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,15 +402,53 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: be03966971b1d44f6b5fd7a3d3721881, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400046, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4963657525187436274}
+    - targetCorrespondingSourceObject: {fileID: 400096, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6134831634445702553}
+    - targetCorrespondingSourceObject: {fileID: 400042, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 790008167547856651}
+    - targetCorrespondingSourceObject: {fileID: 400092, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2925780649857496026}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100110, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3801425667919186910}
+    - targetCorrespondingSourceObject: {fileID: 100110, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2852898713330582294}
+    - targetCorrespondingSourceObject: {fileID: 100110, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4112554976635841756}
   m_SourcePrefab: {fileID: 100100000, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+--- !u!4 &8856842144913591179 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400042, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+  m_PrefabInstance: {fileID: 8856842144913985825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8856842144913591183 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400046, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+  m_PrefabInstance: {fileID: 8856842144913985825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8856842144913591233 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400096, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+  m_PrefabInstance: {fileID: 8856842144913985825}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8856842144913591247 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400110, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
+  m_PrefabInstance: {fileID: 8856842144913985825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8856842144913591293 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400092, guid: 68ff77d4e131db34586dc6f268e92dca, type: 3}
   m_PrefabInstance: {fileID: 8856842144913985825}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8856842144914019887 stripped
@@ -195,6 +457,35 @@ GameObject:
   m_PrefabInstance: {fileID: 8856842144913985825}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &3801425667919186910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8856842144914019887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b22ba2199042f4418e8629bdfb3dea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2852898713330582294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8856842144914019887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2171d45c8ae59d478af1243cf5e9c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left_Arm_Attack_Point: {fileID: 8042073519852332278}
+  right_Arm_Attack_Point: {fileID: 2365097650469029990}
+  left_Leg_Attack_Point: {fileID: 2544087954853576572}
+  right_Leg_Attack_Point: {fileID: 6312554141248486596}
+  stand_Up_Timer: 2
+--- !u!114 &4112554976635841756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
