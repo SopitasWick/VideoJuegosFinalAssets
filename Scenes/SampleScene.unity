@@ -174,7 +174,7 @@ MonoBehaviour:
   damage: 2
   is_Player: 1
   is_Enemy: 0
-  hit_FX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+  hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
 --- !u!1001 &233820263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -562,7 +562,28 @@ MonoBehaviour:
   damage: 2
   is_Player: 1
   is_Enemy: 0
-  hit_FX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+  hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+--- !u!1 &1397238407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8856842144914019887, guid: 88a6aae093585584394edb21ddb0173a, type: 3}
+  m_PrefabInstance: {fileID: 317240183077324118}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1397238411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397238407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2171d45c8ae59d478af1243cf5e9c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left_Arm_Attack_Point: {fileID: 221012599}
+  right_Arm_Attack_Point: {fileID: 1345608562}
+  left_Leg_Attack_Point: {fileID: 2032460975}
+  right_Leg_Attack_Point: {fileID: 1678974666}
 --- !u!4 &1445217396 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8856842144913591179, guid: 88a6aae093585584394edb21ddb0173a, type: 3}
@@ -619,7 +640,64 @@ MonoBehaviour:
   damage: 2
   is_Player: 1
   is_Enemy: 0
-  hit_FX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+  hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+--- !u!1001 &1704930091
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+      propertyPath: m_Name
+      value: HitEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 461070, guid: efd3011863918584d94591e177fa8d29, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461070, guid: efd3011863918584d94591e177fa8d29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.011
+      objectReference: {fileID: 0}
+    - target: {fileID: 461070, guid: efd3011863918584d94591e177fa8d29, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461070, guid: efd3011863918584d94591e177fa8d29, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 461070, guid: efd3011863918584d94591e177fa8d29, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461070, guid: efd3011863918584d94591e177fa8d29, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461070, guid: efd3011863918584d94591e177fa8d29, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461070, guid: efd3011863918584d94591e177fa8d29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461070, guid: efd3011863918584d94591e177fa8d29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461070, guid: efd3011863918584d94591e177fa8d29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efd3011863918584d94591e177fa8d29, type: 3}
 --- !u!1 &2032460975
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,7 +749,7 @@ MonoBehaviour:
   damage: 2
   is_Player: 1
   is_Enemy: 0
-  hit_FX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+  hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
 --- !u!1 &2126373359 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4598518655170423900, guid: baf7174b4c8a2c6439750f0ee95e2c0f, type: 3}
@@ -816,7 +894,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8856842144913591293, guid: 88a6aae093585584394edb21ddb0173a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1345608563}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8856842144914019887, guid: 88a6aae093585584394edb21ddb0173a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1397238411}
   m_SourcePrefab: {fileID: 100100000, guid: 88a6aae093585584394edb21ddb0173a, type: 3}
 --- !u!1001 &2230784454853900713
 PrefabInstance:
@@ -901,3 +982,4 @@ SceneRoots:
   - {fileID: 234889520}
   - {fileID: 317240183077324118}
   - {fileID: 2230784454853900713}
+  - {fileID: 1704930091}
