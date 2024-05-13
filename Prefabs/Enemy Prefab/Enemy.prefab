@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 0
   radius: 1
   damage: 2
   is_Player: 0
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   radius: 1
   damage: 2
   is_Player: 0
