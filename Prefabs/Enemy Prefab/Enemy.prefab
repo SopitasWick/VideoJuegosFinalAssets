@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ebb045ce49ef2a45853dfb8cda2a11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 1.8
   attack_Distance: 1
   chase_Player_After_Attack: 0.2
 --- !u!1 &7438787376947705287

@@ -87,11 +87,27 @@ void Enemy_StandUp(){
         animationScript.StandUp();
     }
 
-public void Attack_FX_Sound(){
-    audioSource.volume =0.2f;
-    audioSource.clip=whoosh_Sound;
-    audioSource.Play();
-}
+public void Attack_FX_Sound()
+    {
+        // Verificar si el componente AudioSource está presente antes de intentar usarlo
+        if (audioSource != null && whoosh_Sound != null)
+        {
+            audioSource.volume = 0.2f;
+            audioSource.clip = whoosh_Sound;
+            audioSource.Play();
+        }
+        else
+        {
+            if (audioSource == null)
+            {
+                Debug.LogError("AudioSource no está configurado.");
+            }
+            if (whoosh_Sound == null)
+            {
+                Debug.LogError("whoosh_Sound no está configurado.");
+            }
+        }
+    }
 public void CharacterDiedSound(){
     audioSource.volume =1f;
     audioSource.clip=dead_Sound;
