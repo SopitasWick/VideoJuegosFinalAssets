@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7812425244577124540}
   - component: {fileID: 8443578496456106663}
   - component: {fileID: 2076903993710864659}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   radius: 1
   damage: 20
   is_Player: 1
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 128
   radius: 1
   damage: 20
   is_Player: 1
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   radius: 1
   damage: 20
   is_Player: 1
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   radius: 1
   damage: 20
   is_Player: 1
