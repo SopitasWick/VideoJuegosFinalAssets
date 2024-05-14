@@ -22,6 +22,6 @@ public class Score : MonoBehaviour
     public static void UpdateScore(int change) {
         score += change;
         GameObject txtScore = GameObject.Find("txtScore");
-        txtScore.GetComponent<Text>().text = "Puntuación: "+score;
+        txtScore.GetComponent<Text>().text = "Puntos: "+score;
     }
 }
