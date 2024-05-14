@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class EnemyManager2 : MonoBehaviour
 {
-public static EnemyManager2 instance;
-[SerializeField]
-private GameObject enemyPrefab;
-void Awake(){
-    if (instance == null)
-    instance=this;
-}
+    public static EnemyManager2 instance;
+    [SerializeField]
+    private GameObject enemyPrefab;
+    
+    void Awake(){
+        if (instance == null)
+        instance=this;
+    }
 
   
     void Start()
     {
         SpawnEnemy();
     }
-public void SpawnEnemy(){
-    Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-}
+
+    public void SpawnEnemy(){
+        Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+    }
 }
 

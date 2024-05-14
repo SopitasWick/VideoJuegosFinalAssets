@@ -39,7 +39,10 @@ public class HelathScript : MonoBehaviour
             characterDied = true;
             if (is_Player)
             {
+                Score.UpdateScore(-5);
                 GameObject.FindGameObjectWithTag(Tags.ENEMY_TAG).GetComponent<EnemyMovement>().enabled = false; // Corregido Tags.ENEMY_TAG
+            } else {
+                Score.UpdateScore(1);
             }
             return;
         }

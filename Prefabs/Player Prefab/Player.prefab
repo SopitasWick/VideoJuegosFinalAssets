@@ -129,6 +129,7 @@ MonoBehaviour:
   health: 100
   KnockDown: 1
   is_Player: 1
+  score: {fileID: 0}
 --- !u!114 &2076903993710864659
 MonoBehaviour:
   m_ObjectHideFlags: 0
