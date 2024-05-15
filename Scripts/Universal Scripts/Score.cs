@@ -1,32 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Necesario para gestionar las escenas
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
     public static int score = 0;
+    public GameObject winPanel; // Asigna el objeto 'YouWinPanel' desde el editor
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject txtScore = GameObject.Find("txtScore");
+        if (txtScore != null)
+        {
+            txtScore.GetComponent<Text>().text = "Puntos: " + score;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
-    public static void UpdateScore(int change) {
+    public static void UpdateScore(int change)
+    {
         score += change;
         GameObject txtScore = GameObject.Find("txtScore");
-        txtScore.GetComponent<Text>().text = "Puntos: " + score;
+        if (txtScore != null)
+        {
+            txtScore.GetComponent<Text>().text = "Puntos: " + score;
+        }
 
-        // Comprobar si el puntaje ha llegado a 10
-        if (score >= 5)
+        if (score >= 11)
         {
             CambiarEscena();
         }
@@ -34,7 +40,14 @@ public class Score : MonoBehaviour
 
     static void CambiarEscena()
     {
-        // Cambiar a la escena "Escenario2"
-        SceneManager.LoadScene("Escenario2");
+        SceneManager.LoadScene("Youwin"); // Cambia a la escena 'YouWin'
+     
+    }
+
+    public void SalirAlMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
+
+

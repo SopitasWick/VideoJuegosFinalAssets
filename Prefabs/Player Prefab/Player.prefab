@@ -689,7 +689,7 @@ MonoBehaviour:
   left_Leg_Attack_Point: {fileID: 2544087954853576572}
   right_Leg_Attack_Point: {fileID: 6312554141248486596}
   stand_Up_Timer: 2
-  whoosh_Sound: {fileID: 8300000, guid: f5608c84e5ee50144b87cbc77a497894, type: 3}
+  whoosh_Sound: {fileID: 8300000, guid: 639e54cbcc266984f889a7c184dc4481, type: 3}
   fall_Sound: {fileID: 8300000, guid: b21e5d03f348fc448b6675e29016addf, type: 3}
   ground_Hit_Sound: {fileID: 8300000, guid: b21e5d03f348fc448b6675e29016addf, type: 3}
   dead_Sound: {fileID: 8300000, guid: 9fb45eaf2e289214a90482b30243d971, type: 3}
